@@ -29,7 +29,6 @@ async function getWeatherDataApi(cityName){
     return response;
 }
 
-
 // display today data 
 function displayTodayData(data) {
     
@@ -80,5 +79,7 @@ startApp();
 //! ========================> search
 btnSearch.addEventListener('input', function()
 {
-    startApp(btnSearch.value)
+    if(btnSearch.value.length >= 3){
+        startApp(btnSearch.value)
+    }
 })
